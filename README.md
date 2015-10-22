@@ -1,4 +1,5 @@
-# Code Newbie Iron Coder Challenge: ante_up from http://www.codenewbie.org/blogs/ante-up
+# Code Newbie Iron Coder Challenge: ante_up 
+from http://www.codenewbie.org/blogs/ante-up
 
 You have been contacted by CNB Tech Security who is in dire need of technical assistance. CNB Tech Security provides security services for the World Poker Federation, a prestigious Poker Tournament.
 
