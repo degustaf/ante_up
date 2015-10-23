@@ -6,7 +6,8 @@ import collections
 
 Card = collections.namedtuple('Card', ['value', 'suit'])
 SUITS = {'CDHS'}
-VALUES = ('ATJQK', range(2, 10))
+VALUES = {str(x): x for x in range(2, 10)}
+VALUES.update({'T': 10, 'J': 11, 'Q': 12, 'K': 13, 'A': 14})
 
 
 def create_card(card_code):
@@ -23,3 +24,14 @@ def create_card(card_code):
         raise ValueError("{} is an invalid suit".format(new_card.suit))
 
     return new_card
+
+
+def card_value(card_instance):
+    """
+    Assign a value to a card so that a hand can be sorted to test for a
+    straight.
+    """
+    if not isinstance(card_instance, 'Card'):
+        raise TypeError("'card_value' is expecting an object of type 'Card'")
+
+    return VALUES[card_instance.value]
