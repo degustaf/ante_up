@@ -5,6 +5,6 @@ python:
     - "3.6-dev"
     - "nightly"
 
-install: "pip install --user -r requirements.txt -r test_requirements.txt"
+install: "pip install -r requirements.txt -r test_requirements.txt"
 
 script: "pytest"
